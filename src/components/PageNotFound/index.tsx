@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Header from "../AdminFolder/Header";
-
+import "./index.css";
 const PageNotFound = () => {
   const navigate = useNavigate();
   const storedUserDetails: any = localStorage.getItem("userDetails");
