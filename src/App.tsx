@@ -58,6 +58,7 @@ import {
   UserProtectedRoute,
   AdminProtectedRoute,
 } from "./components/ProtectedRoute";
+import Home from "./components/Home";
 
 function App() {
   return (
@@ -65,6 +66,7 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/" element={<Home />} />
 
         {/* User Routes */}
         <Route element={<UserProtectedRoute />}>
