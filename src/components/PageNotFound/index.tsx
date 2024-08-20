@@ -18,21 +18,21 @@ const PageNotFound = () => {
         <Header />
       </div>
 
-      <div>
+      <div className="page-not-found">
         <img
           className="notfound-image"
           src="https://www.cloudns.net/blog/wp-content/uploads/2023/10/Error-404-Page-Not-Found.png"
           alt="Not Found"
         />
+        <button
+          className="add-course"
+          onClick={() => {
+            navigate(role);
+          }}
+        >
+          Back to Home
+        </button>
       </div>
-      <button
-        className="add-course"
-        onClick={() => {
-          navigate(role);
-        }}
-      >
-        Back to Home
-      </button>
     </div>
   );
 };

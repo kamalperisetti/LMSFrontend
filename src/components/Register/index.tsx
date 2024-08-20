@@ -68,9 +68,9 @@ const Register = () => {
             </label>
             <br />
             <input
-              onChange={(e) => setPhoneNumber(e.target.value)}
+              onChange={(e) => setFirstName(e.target.value)}
               required
-              value={phonenumber}
+              value={firstName}
               className="login-inputs"
               id="phone"
               type="text"
@@ -83,9 +83,9 @@ const Register = () => {
             </label>
             <br />
             <input
-              onChange={(e) => setPhoneNumber(e.target.value)}
+              onChange={(e) => setLastName(e.target.value)}
               required
-              value={phonenumber}
+              value={lastName}
               className="login-inputs"
               id="phone"
               type="text"
@@ -98,9 +98,9 @@ const Register = () => {
             </label>
             <br />
             <input
-              onChange={(e) => setPhoneNumber(e.target.value)}
+              onChange={(e) => setUserName(e.target.value)}
               required
-              value={phonenumber}
+              value={userName}
               className="login-inputs"
               id="phone"
               type="text"
@@ -113,9 +113,9 @@ const Register = () => {
             </label>
             <br />
             <input
-              onChange={(e) => setPhoneNumber(e.target.value)}
+              onChange={(e) => setEmail(e.target.value)}
               required
-              value={phonenumber}
+              value={email}
               className="login-inputs"
               id="phone"
               type="text"
