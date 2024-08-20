@@ -217,11 +217,11 @@ const Login = () => {
   };
 
   return (
-    <div className="login-container">
+    <div>
       {loading ? (
         <Loader />
       ) : (
-        <div>
+        <div className="login-container">
           <div className="image-container">
             <img
               className="login-image"
