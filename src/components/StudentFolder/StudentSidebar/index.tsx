@@ -1,16 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import "./index.css";
-// import { useAppSelector } from "../../Hooks";
 import Cookies from "js-cookie";
 const StudentSidebar = () => {
   const navigate = useNavigate();
-  // const student = useAppSelector((state: any) => state.adminDetails.user);
   const storedUserDetails: any = localStorage.getItem("studentDetails");
   const parsedData = JSON.parse(storedUserDetails);
   const student = parsedData.UserDetails;
-  // const parsedData = JSON.parse(storedUserDetails);
-  // console.log(parsedData.UserDetails, "From Local Storage");
-  // console.log(student, "KKKKKKIIIIIIII");
+
   const profilePic =
     student.imageUrl !== "null"
       ? "https://i.pngimg.me/thumb/f/720/c3f2c592f9.jpg"
