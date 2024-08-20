@@ -218,8 +218,81 @@ const Login = () => {
 
   return (
     <div className="login-container">
-      {loading && <Loader />}
-      <div className="image-container">
+      {loading ? (
+        <Loader />
+      ) : (
+        <div>
+          <div className="image-container">
+            <img
+              className="login-image"
+              src="https://res.cloudinary.com/dymvamc30/image/upload/v1723035328/7973703_3807931_ayjwee.jpg"
+              alt="login-image"
+            />
+          </div>
+          <form onSubmit={validateTheUser} className="user-details-container">
+            <div>
+              <label className="label" htmlFor="phone">
+                User Name
+              </label>
+              <br />
+              <input
+                onChange={(e) => setPhoneNumber(e.target.value)}
+                required
+                value={phonenumber}
+                className="login-inputs"
+                id="phone"
+                type="text"
+                placeholder="Please Enter Phonenumber"
+              />
+            </div>
+
+            <div className="password-con">
+              <label className="label" htmlFor="password">
+                Password
+              </label>
+              <div className="password-icon">
+                <input
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                  className="login-inputs"
+                  type={hide ? "text" : "password"}
+                  placeholder="Please Enter Password"
+                />
+
+                {hide ? (
+                  <FaRegEye className="eye-icon" onClick={showPassword} />
+                ) : (
+                  <FaEyeSlash className="eye-icon" onClick={showPassword} />
+                )}
+              </div>
+            </div>
+            <div>
+              <label className="label">Role</label>
+              <br />
+              <select
+                value={role}
+                className="role"
+                onChange={(e) => setRole(e.target.value)}
+              >
+                <option value="student">Student</option>
+                <option value="admin">Admin</option>
+              </select>
+            </div>
+            <div>
+              <button className="login-btn" type="submit" disabled={loading}>
+                Login
+              </button>
+              <Link to="/register">
+                <button className="login-btn" type="button" disabled={loading}>
+                  Register
+                </button>
+              </Link>
+            </div>
+          </form>
+        </div>
+      )}
+      {/* <div className="image-container">
         <img
           className="login-image"
           src="https://res.cloudinary.com/dymvamc30/image/upload/v1723035328/7973703_3807931_ayjwee.jpg"
@@ -286,7 +359,7 @@ const Login = () => {
             </button>
           </Link>
         </div>
-      </form>
+      </form> */}
       <ToastContainer />
     </div>
   );
