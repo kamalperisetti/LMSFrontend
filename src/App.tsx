@@ -58,7 +58,8 @@ import {
   UserProtectedRoute,
   AdminProtectedRoute,
 } from "./components/ProtectedRoute";
-import Home from "./components/Home";
+// import Home from "./components/Home";
+import PageNotFound from "./components/PageNotFound";
 
 function App() {
   return (
@@ -66,9 +67,6 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/" element={<Home />} />
-
-        {/* User Routes */}
         <Route element={<UserProtectedRoute />}>
           <Route path="/student" element={<Student />} />
           <Route path="/all-courses" element={<AllCourses />} />
@@ -86,6 +84,7 @@ function App() {
           <Route path="/allstudents" element={<AllStudents />} />
           <Route path="/student-details" element={<StudentDetails />} />
           <Route path="/add-course" element={<AddCourse />} />
+          <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
