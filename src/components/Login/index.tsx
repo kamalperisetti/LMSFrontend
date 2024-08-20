@@ -152,14 +152,14 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { addAdmin } from "../../redex/admin";
 import Cookies from "js-cookie";
-import Loader from "../Loader"; // Import the Loader component
+import Loader from "../Loader";
 
 const Login = () => {
   const [hide, setHide] = useState<boolean>(false);
   const [phonenumber, setPhoneNumber] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [role, setRole] = useState<string>("student");
-  const [loading, setLoading] = useState<boolean>(false); // Add loading state
+  const [loading, setLoading] = useState<boolean>(false);
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
 
@@ -176,7 +176,7 @@ const Login = () => {
     };
 
     try {
-      setLoading(true); // Show loader
+      setLoading(true);
       const response: AxiosResponse<any> = await axios.post(url, details);
 
       if (role === "student" && response.data.UserDetails.role === "USER") {
