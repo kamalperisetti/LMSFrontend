@@ -1,0 +1,34 @@
+.side-bar-container {
+  width: 18%;
+  /* position: fixed; */
+  box-shadow: 5px 0 0px -2px rgba(0, 0, 0, 0.5);
+  height: 100vw;
+  position: fixed; /* Fixes the sidebar in place */
+  top: 80px; /* Aligns the sidebar to the top of the viewport */
+  left: 0;
+  z-index: 1000;
+}
+.profile-pic {
+  height: 65px;
+  width: 60px;
+  border-radius: 50%;
+  margin: 10px;
+}
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sidebar-elements {
+  cursor: pointer;
+  margin-left: 40px;
+  padding: 5px;
+  width: 50%;
+}
+.active {
+  background-color: #007bff;
+  color: white;
+  padding: 8px;
+  width: 50%;
+  border-radius: 5px;
+}

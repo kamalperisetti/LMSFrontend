@@ -1,0 +1,18 @@
+.course_details-container {
+  display: flex;
+}
+
+.description {
+  font-size: 18px;
+}
+
+/* .side-bar-container {
+  width: 20%;
+  position: sticky;
+} */
+
+.content-container {
+  width: 80%;
+  margin-top: 80px;
+  margin-left: 20%;
+}

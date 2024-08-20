@@ -1,0 +1,35 @@
+.main-container {
+  display: flex;
+}
+
+.course-title-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.individual-course-container {
+  margin: 10px;
+  text-align: center;
+  padding: 10px;
+  border: solid 1px;
+  border-radius: 5px;
+}
+.individual-course-container:hover {
+  cursor: pointer;
+}
+.course-image {
+  height: 200px;
+  width: 300px;
+  border-radius: 5px;
+}
+/* .side-bar-container {
+  width: 20%;
+  position: fixed;
+} */
+.enrolled {
+  text-align: center;
+}
+.enrolled:hover {
+  color: blue;
+  cursor: pointer;
+}

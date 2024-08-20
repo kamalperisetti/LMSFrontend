@@ -1,0 +1,16 @@
+.completed {
+  background-color: lightgray;
+  color: black;
+  width: 120px;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.completed.active {
+  background-color: green;
+  color: white;
+}

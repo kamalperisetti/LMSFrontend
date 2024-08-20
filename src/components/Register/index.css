@@ -1,0 +1,58 @@
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 99vw;
+  height: 80vh;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+.register {
+  margin-top: 80px;
+}
+.register-image {
+  height: 600px;
+  width: 600px;
+}
+@media (max-width: 768px) {
+  .register-image {
+    height: 300px;
+    width: 150px;
+  }
+}
+.register-details-container {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 10px;
+  height: 600px;
+  width: 700px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .register-details-container {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 10px;
+    height: 330px;
+    width: 176px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.register-pass {
+  margin-left: 0px;
+}
+.register-con {
+  margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .register-con {
+    margin-bottom: 0px;
+  }
+}

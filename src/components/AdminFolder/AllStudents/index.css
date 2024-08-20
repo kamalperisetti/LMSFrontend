@@ -1,0 +1,61 @@
+.all-students-container {
+  display: flex;
+}
+.students-details-container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20%;
+  margin-top: 80px;
+}
+
+.students-details-container {
+  width: 100%;
+  padding: 20px;
+}
+
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.student-table th,
+.student-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.student-table th {
+  background-color: #f4f4f4;
+}
+
+.student-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.student-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.student-table .button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.student-table .button:hover {
+  background-color: #0056b3;
+}
+
+.delete-icon {
+  background-color: transparent;
+  /* color: transparent; */
+  border: none;
+  font-size: 18px;
+  text-align: center;
+  margin-left: 40%;
+  cursor: pointer;
+}
