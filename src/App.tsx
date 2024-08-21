@@ -12,6 +12,7 @@ import CourseBasedStudents from "./components/AdminFolder/CourseBasedStudents";
 import AllCourses from "./components/StudentFolder/AllCourse";
 import StudentAllCourse from "./components/StudentFolder/StudentAllCourseDetails";
 import ProtectedRoute from "./components/ProtectedRoute";
+import PageNotFound from "./components/PageNotFound";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="/add-course" element={<AddCourse />} />
           <Route path="/all-courses" element={<AllCourses />} />
           <Route path="/course-details" element={<StudentAllCourse />} />
+          <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
