@@ -99,7 +99,7 @@ const Login = () => {
                 className="login-inputs"
                 id="phone"
                 type="text"
-                placeholder="Please Enter Phonenumber"
+                placeholder="Please Enter Username"
               />
             </div>
 

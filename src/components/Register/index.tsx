@@ -89,7 +89,7 @@ const Register = () => {
                   className="login-inputs"
                   id="phone"
                   type="text"
-                  placeholder="Please Enter Phonenumber"
+                  placeholder="Please Enter Firstname"
                 />
               </div>
               <div className="register-con">
@@ -104,7 +104,7 @@ const Register = () => {
                   className="login-inputs"
                   id="phone"
                   type="text"
-                  placeholder="Please Enter Phonenumber"
+                  placeholder="Please Enter Lastname"
                 />
               </div>
               <div className="register-con">
@@ -119,7 +119,7 @@ const Register = () => {
                   className="login-inputs"
                   id="phone"
                   type="text"
-                  placeholder="Please Enter Phonenumber"
+                  placeholder="Please Enter Username"
                 />
               </div>
               <div className="register-con">
@@ -134,7 +134,7 @@ const Register = () => {
                   className="login-inputs"
                   id="phone"
                   type="text"
-                  placeholder="Please Enter Phonenumber"
+                  placeholder="Please Enter Email"
                 />
               </div>
               <div className="register-con">
