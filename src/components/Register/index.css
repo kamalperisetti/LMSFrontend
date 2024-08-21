@@ -56,3 +56,11 @@
     margin-bottom: 0px;
   }
 }
+.register-heading {
+  color: darkorchid;
+}
+@media (max-width: 768px) {
+  .register-heading {
+    font-size: 12px;
+  }
+}

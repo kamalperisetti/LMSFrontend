@@ -76,6 +76,7 @@ const Register = () => {
             className="register-details-container"
           >
             <div>
+              <h1 className="register-heading">Student Register Form</h1>
               <div className="register-con">
                 <label className="label" htmlFor="phone">
                   First Name
