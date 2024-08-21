@@ -527,7 +527,10 @@ const Student = () => {
           </div>
         ) : (
           <div className="container-students-main">
-            <h1 style={{ textAlign: "center", margin: "0px 0px 50px 0px" }}>
+            <h1
+              className="enrolled-courses-heading"
+              style={{ textAlign: "center", margin: "0px 0px 50px 0px" }}
+            >
               My Enrolled Courses
             </h1>
             <div className="dashboard-container">
@@ -543,66 +546,105 @@ const Student = () => {
                   }}
                   onClick={() => navigateToCourseDetails(course)}
                 >
-                  <img
-                    className="course-image"
-                    src={course.imageUrl}
-                    alt={course.courseName}
-                  />
-                  <div className="course-info">
-                    <h3 className="course-name">{course.courseName}</h3>
-                    <div className="progress-info">
-                      <p>
-                        Total Content:{" "}
-                        <span style={{ fontWeight: "bold" }}>
-                          {course.progress.totalContent}
-                        </span>
-                      </p>
-                      <p>
-                        Completed:{" "}
-                        <span style={{ fontWeight: "bold" }}>
-                          {course.progress.completed}
-                        </span>
-                      </p>
+                  <div className="student-displays-dashboard">
+                    {" "}
+                    <img
+                      className="student-course-image"
+                      src={course.imageUrl}
+                      alt={course.courseName}
+                    />
+                    <div className="course-info">
+                      <h3 className="course-name">{course.courseName}</h3>
+                      <div className="progress-info">
+                        <p className="course-completed-para">
+                          Total Content:{" "}
+                          <span style={{ fontWeight: "bold" }}>
+                            {course.progress.totalContent}
+                          </span>
+                        </p>
+                        <p className="course-completed-para">
+                          Completed:{" "}
+                          <span style={{ fontWeight: "bold" }}>
+                            {course.progress.completed}
+                          </span>
+                        </p>
+                      </div>
                     </div>
                   </div>
+
                   <div className="course-graph">
-                    <ResponsiveContainer width="100%" height="100%">
-                      <PieChart>
-                        <Pie
-                          data={[
-                            {
-                              name: "Completed",
-                              value: course.progress.completed,
-                            },
-                            {
-                              name: "Remaining",
-                              value:
-                                course.progress.totalContent -
-                                course.progress.completed,
-                            },
-                          ]}
-                          innerRadius={40}
-                          outerRadius={60}
-                          fill="#8884d8"
-                          paddingAngle={5}
-                          dataKey="value"
-                        >
-                          {COLORS.map((color, index) => (
-                            <Cell key={`cell-${index}`} fill={color} />
-                          ))}
-                        </Pie>
-                        <Tooltip />
-                        <Legend
-                          verticalAlign="bottom"
-                          layout="horizontal"
-                          align="center"
-                          iconType="circle"
-                          formatter={(value) => (
-                            <span style={{ fontSize: "0.8rem" }}>{value}</span>
-                          )}
-                        />
-                      </PieChart>
-                    </ResponsiveContainer>
+                    <PieChart width={120} height={200}>
+                      <Pie
+                        data={[
+                          {
+                            name: "Completed",
+                            value: course.progress.completed,
+                          },
+                          {
+                            name: "Remaining",
+                            value:
+                              course.progress.totalContent -
+                              course.progress.completed,
+                          },
+                        ]}
+                        innerRadius={40}
+                        outerRadius={60}
+                        fill="#8884d8"
+                        paddingAngle={5}
+                        dataKey="value"
+                      >
+                        {COLORS.map((color, index) => (
+                          <Cell key={`cell-${index}`} fill={color} />
+                        ))}
+                      </Pie>
+                      <Tooltip />
+                      <Legend
+                        verticalAlign="bottom"
+                        layout="horizontal"
+                        align="center"
+                        iconType="circle"
+                        formatter={(value) => (
+                          <span style={{ fontSize: "0.8rem" }}>{value}</span>
+                        )}
+                      />
+                    </PieChart>
+                  </div>
+                  <div className="course-graph-mobile">
+                    <PieChart width={135} height={195}>
+                      <Pie
+                        data={[
+                          {
+                            name: "Completed",
+                            value: course.progress.completed,
+                          },
+                          {
+                            name: "Remaining",
+                            value:
+                              course.progress.totalContent -
+                              course.progress.completed,
+                          },
+                        ]}
+                        innerRadius={40}
+                        outerRadius={60}
+                        fill="#8884d8"
+                        paddingAngle={5}
+                        dataKey="value"
+                      >
+                        {COLORS.map((color, index) => (
+                          <Cell key={`cell-${index}`} fill={color} />
+                        ))}
+                      </Pie>
+                      <Tooltip />
+                      <Legend
+                        verticalAlign="bottom"
+                        layout="horizontal"
+                        align="center"
+                        iconType="circle"
+                        formatter={(value) => (
+                          <span style={{ fontSize: "0.8rem" }}>{value}</span>
+                        )}
+                      />
+                    </PieChart>
                   </div>
                 </div>
               ))}

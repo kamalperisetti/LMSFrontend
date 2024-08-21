@@ -1,27 +1,15 @@
-/* .completed {
-  background-color: transparent;
-  border: 0.5px solid black;
-  border-radius: 4px;
-  display: flex;
-  padding: 5px;
-  align-items: center;
-  gap: 5px;
-}
-.student-all-course-container {
-  width: 80%;
-  margin-top: 80px;
-  margin-left: 20%;
-} */
-
 .completed {
-  /* Your existing styles for the button */
   background-color: #f0f0f0;
   color: #333;
-  /* Add any other styles you want for the default state */
 }
 
 .completed-button {
-  background-color: #4caf50; /* Green background */
-  color: white; /* White text */
-  /* Add any other styles you want for the completed state */
+  background-color: #4caf50;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .student-content-course-heading {
+    font-size: 10px;
+  }
 }

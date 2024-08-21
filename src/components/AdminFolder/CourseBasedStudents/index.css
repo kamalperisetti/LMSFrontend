@@ -1,6 +1,11 @@
 .course-based-student-container {
   display: flex;
 }
+@media (max-width: 768px) {
+  .course-based-student-container {
+    flex-direction: column;
+  }
+}
 .students-details-container {
   width: 80%;
   display: flex;

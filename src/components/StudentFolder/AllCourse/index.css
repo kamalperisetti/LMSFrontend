@@ -9,6 +9,40 @@
   cursor: pointer;
 }
 
-.formargin {
-  margin-left: 19px;
+@media (max-width: 768px) {
+  .enroll-btn {
+    padding: 4px;
+    font-size: 8px;
+    width: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .individual-course-container-student {
+    padding: 1px;
+    margin: 6px;
+    width: 160px;
+    height: 145px;
+    border: solid 1px;
+    border-radius: 5px;
+    text-align: center;
+  }
+}
+.course-image-student {
+  height: 200px;
+  width: 300px;
+  border-radius: 3px;
+}
+@media (max-width: 768px) {
+  .course-image-student {
+    margin-left: 0px;
+    height: 102px;
+    width: 159px;
+  }
+}
+@media (max-width: 768px) {
+  .enrole-course-title {
+    font-size: 7px;
+    margin-bottom: 0px;
+  }
 }

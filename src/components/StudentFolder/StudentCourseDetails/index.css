@@ -9,8 +9,26 @@
   gap: 10px;
   align-items: center;
 }
+@media (max-width: 768px) {
+  .completed {
+    width: 70px;
+    font-size: 8px;
+    padding: 3px;
+  }
+}
 
 .completed.active {
   background-color: green;
   color: white;
+}
+
+@media (max-width: 768px) {
+  .student-content-side-heading {
+    font-size: 9px;
+  }
+}
+@media (max-width: 768px) {
+  .student-content-description {
+    font-size: 8px;
+  }
 }

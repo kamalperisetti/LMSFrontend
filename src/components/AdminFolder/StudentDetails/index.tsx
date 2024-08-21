@@ -80,7 +80,9 @@ const StudentDetails = () => {
           <h1 className="admin-student-details-heading">Enrolled Courses</h1>
           <hr />
           {studentDetails.courses.length === 0 && (
-            <h1>Student Not Enrolled In Any Course</h1>
+            <h1 className="admin-student-details-heading">
+              Student Not Enrolled In Any Course
+            </h1>
           )}
           {dataa.map((data: CourseDetails) => (
             <div key={data.courseName}>
@@ -119,8 +121,8 @@ const StudentDetails = () => {
               <div className="for-mobile-chart-container">
                 <BarChart
                   className="bar-chart"
-                  width={200}
-                  height={100}
+                  width={300}
+                  height={150}
                   data={[data]}
                   margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
                 >

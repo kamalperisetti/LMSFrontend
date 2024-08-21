@@ -2,6 +2,11 @@
   display: flex;
 }
 
+@media (max-width: 768px) {
+  .course_details-container {
+    flex-direction: column;
+  }
+}
 .description {
   font-size: 18px;
 }
@@ -25,8 +30,9 @@
 }
 @media (max-width: 768px) {
   .content-container {
-    margin-top: 10%;
-    margin-left: 29%;
+    width: 98%;
+    margin-top: 3px;
+    margin-left: 3px;
   }
 }
 

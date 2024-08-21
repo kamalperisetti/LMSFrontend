@@ -95,13 +95,13 @@ const AllCourses = () => {
           <div className="course-title-container">
             {course.map((each: Course) => (
               <div key={each.courseId}>
-                <div className="individual-course-container">
+                <div className="individual-course-container-student individual-course-container">
                   <img
-                    className="course-image formargin"
+                    className="course-image-student "
                     src={each.imageUrl}
                     alt={each.courseName}
                   />
-                  <p>{each.courseName}</p>
+                  <p className="enrole-course-title">{each.courseName}</p>
                   <button
                     className="enroll-btn"
                     onClick={() => enrollingOnCourse(each)}

@@ -1,6 +1,12 @@
 .main-container {
   display: flex;
 }
+@media (max-width: 768px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 .course-title-container {
   display: flex;
@@ -17,7 +23,7 @@
 @media (max-width: 768px) {
   .individual-course-container {
     padding: 1px;
-    margin: 1px;
+    margin: 6px;
     width: 100px;
     height: 93px;
   }
@@ -49,10 +55,12 @@
   width: 74%;
   margin-left: 17%;
 }
+
 @media (max-width: 768px) {
   .content-container-main {
-    margin-top: 16%;
-    margin-left: 23%;
+    margin-top: 2%;
+    width: 100%;
+    margin-left: 0px;
   }
 }
 .enrolled {

@@ -1,6 +1,11 @@
 .single-student-details-main-container {
   display: flex;
 }
+@media (max-width: 768px) {
+  .single-student-details-main-container {
+    flex-direction: column;
+  }
+}
 .single-student-details-container {
   width: 80%;
   margin-left: 20%;
@@ -8,7 +13,9 @@
 }
 @media (max-width: 768px) {
   .single-student-details-container {
-    margin-left: 30%;
+    margin-left: 3px;
+    margin-top: 8px;
+    width: 100%;
   }
 }
 .student-image {

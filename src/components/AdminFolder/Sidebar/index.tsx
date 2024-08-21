@@ -1,6 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import "./index.css";
 import Cookies from "js-cookie";
+import { MdSpaceDashboard } from "react-icons/md";
+import { PiStudentFill } from "react-icons/pi";
+import { ImBoxAdd } from "react-icons/im";
 const Sidebar = () => {
   const navigate = useNavigate();
 
@@ -43,7 +46,7 @@ const Sidebar = () => {
             </p>
           )}
         </div>
-        <div>
+        <div className="sidebar-element-container">
           <p
             className={`sidebar-elements ${
               location.pathname === "/admin" && "active"
@@ -52,7 +55,7 @@ const Sidebar = () => {
               navigate("/admin");
             }}
           >
-            Dashboard
+            <MdSpaceDashboard /> Dashboard
           </p>
           <p
             className={`sidebar-elements ${
@@ -62,7 +65,7 @@ const Sidebar = () => {
               navigate("/allstudents");
             }}
           >
-            All Students
+            <PiStudentFill /> All Students
           </p>
           <p
             className={`sidebar-elements ${
@@ -72,12 +75,58 @@ const Sidebar = () => {
               navigate("/add-course");
             }}
           >
-            Add / Remove Courses
+            <ImBoxAdd /> Add / Remove Courses
           </p>
         </div>
         <div>
           <p onClick={handleLogOut} className="sidebar-elements">
-            Logout 👋
+            👋 Logout
+          </p>
+        </div>
+      </div>
+      <div className="side-bar-container-mobile">
+        <div className="profile-details">
+          {adminD === null ? (
+            <p className="sidebar-title-mobile">Welcome User Name 🧑‍💻</p>
+          ) : (
+            <p className="sidebar-title-mobile">
+              Welcome {adminD?.firstName} {adminD?.lastName} 🧑‍💻
+            </p>
+          )}
+        </div>
+        <div className="sidebar-element-container-mobile">
+          <p
+            className={`sidebar-elements-mobile ${
+              location.pathname === "/admin" && "active-mobile"
+            }`}
+            onClick={() => {
+              navigate("/admin");
+            }}
+          >
+            <MdSpaceDashboard />
+          </p>
+          <p
+            className={`sidebar-elements-mobile ${
+              location.pathname === "/allstudents" && "active-mobile"
+            }`}
+            onClick={() => {
+              navigate("/allstudents");
+            }}
+          >
+            <PiStudentFill />
+          </p>
+          <p
+            className={`sidebar-elements-mobile ${
+              location.pathname === "/add-course" && "active-mobile"
+            }`}
+            onClick={() => {
+              navigate("/add-course");
+            }}
+          >
+            <ImBoxAdd />
+          </p>
+          <p onClick={handleLogOut} className="sidebar-elements-mobile">
+            👋
           </p>
         </div>
       </div>

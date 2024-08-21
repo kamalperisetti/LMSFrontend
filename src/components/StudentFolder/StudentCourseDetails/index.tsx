@@ -22,8 +22,8 @@ const StudentCourseDetails = ({
 
   return (
     <div>
-      <h2>{content}</h2>
-      <p>{description}</p>
+      <h2 className="student-content-side-heading">{content}</h2>
+      <p className="student-content-description">{description}</p>
       <button
         className={isCompleted ? "completed active" : "completed"}
         onClick={handleButtonClick}

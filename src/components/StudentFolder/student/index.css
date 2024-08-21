@@ -8,6 +8,21 @@
   flex-direction: column;
 }
 
+@media (max-width: 768px) {
+  .student-enrolled-course-container {
+    width: 100%;
+    margin-top: 8px;
+    margin-left: 3px;
+  }
+}
+
+@media (max-width: 768px) {
+  .enrolled-courses-heading {
+    font-size: 8px;
+    margin-bottom: 0px !important;
+  }
+}
+
 .dashboard-container {
   width: 100%;
   /* display: flex; */
@@ -26,34 +41,82 @@
   /* height: 250px; */
   max-width: 800px;
 }
+@media (max-width: 768px) {
+  .course-progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 
-.course-image {
+    /* height: 250px; */
+  }
+}
+/* .student-course-image {
   width: 100px;
   height: 100px;
   margin-right: 20px;
+
+} */
+.student-course-image {
+  height: 200px;
+  width: 300px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .student-course-image {
+    height: 110px;
+    width: 155px;
+    border-radius: 5px;
+    margin-right: 20px;
+  }
 }
 
 .course-info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  min-width: 307px;
 }
 
+@media (max-width: 768px) {
+  .course-info {
+    width: 100px;
+  }
+}
 .course-graph {
   width: 246px;
   height: 175px;
 }
 
+@media (max-width: 768px) {
+  .course-graph {
+    width: 100px;
+    height: 100px;
+  }
+}
 .course-name {
   font-size: 18px;
   margin-bottom: 10px;
   max-width: 260px;
 }
-
+@media (max-width: 768px) {
+  .course-name {
+    font-size: 9px;
+  }
+}
 .progress-info {
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .course-completed-para {
+    font-size: 7px;
+  }
 }
 /* .container-students-main {
   margin-left: 10%;
@@ -81,5 +144,40 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+.student-displays-dashboard {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .student-displays-dashboard {
+    display: block;
+  }
+}
+
+.piechart {
+  width: 120px !important;
+  height: 200px !important;
+}
+.course-graph-mobile {
+  display: none;
+}
+.course-graph {
+  display: block;
+}
+@media (max-width: 768px) {
+  .course-graph {
+    display: none;
+  }
+  .course-graph-mobile {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-students-main {
+    width: 100%;
+    margin-top: 3px;
   }
 }
