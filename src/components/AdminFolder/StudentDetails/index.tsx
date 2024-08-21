@@ -1,7 +1,7 @@
 import {
   BarChart,
   Bar,
-  XAxis,
+  // XAxis,
   YAxis,
   Tooltip,
   CartesianGrid,
