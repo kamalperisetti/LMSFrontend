@@ -12,8 +12,11 @@ const StudentSidebar = () => {
       ? "https://i.pngimg.me/thumb/f/720/c3f2c592f9.jpg"
       : student.imageUrl;
   const handleLogOut = () => {
-    Cookies.remove("jwt_token");
-    navigate("/login");
+    const confirmDelete = window.confirm(`Are you sure you want to Logout?`);
+    if (confirmDelete) {
+      Cookies.remove("jwt_token");
+      navigate("/login");
+    }
   };
   return (
     <div className="side-bar-container">
@@ -28,11 +31,11 @@ const StudentSidebar = () => {
           <img className="profile-pic" src={profilePic} alt="Profile Pic" />
         )}
         {student === null ? (
-          <h4>Welcome User Name 🧑‍💻</h4>
+          <p>Welcome User Name 🧑‍💻</p>
         ) : (
-          <h4>
+          <p>
             Welcome {student.firstName} {student.lastName} 🧑‍💻
-          </h4>
+          </p>
         )}
       </div>
       <hr />

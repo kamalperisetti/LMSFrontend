@@ -16,8 +16,11 @@ const Sidebar = () => {
     : "https://png.pngtree.com/element_our/20200610/ourmid/pngtree-character-default-avatar-image_2237203.jpg";
 
   const handleLogOut = () => {
-    Cookies.remove("jwt_token");
-    navigate("/login");
+    const confirmDelete = window.confirm(`Are you sure you want to Logout?`);
+    if (confirmDelete) {
+      Cookies.remove("jwt_token");
+      navigate("/login");
+    }
   };
   return (
     <div>
@@ -33,11 +36,11 @@ const Sidebar = () => {
             <img className="profile-pic" src={imageUrl} alt="Profile Pic" />
           )}
           {adminD === null ? (
-            <h4>Welcome User Name 🧑‍💻</h4>
+            <p className="sidebar-title">Welcome User Name 🧑‍💻</p>
           ) : (
-            <h4>
+            <p className="sidebar-title">
               Welcome {adminD?.firstName} {adminD?.lastName} 🧑‍💻
-            </h4>
+            </p>
           )}
         </div>
         <div>

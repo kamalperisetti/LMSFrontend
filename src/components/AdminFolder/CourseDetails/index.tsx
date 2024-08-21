@@ -18,11 +18,11 @@ const CourseDetails = () => {
       </div>
 
       <div className="content-container">
-        <h1> {details.courseName}</h1>
-        <ul>
+        <h1 className="course-details-heading"> {details.courseName}</h1>
+        <ul className="course-details-side-conatainer">
           {details.courseDetails.map((each: CourseDetail) => (
             <div key={each.courserDetailsId}>
-              <h2>{each.content}</h2>
+              <h2 className="course-details-side-heading">{each.content}</h2>
               <p className="description">{each.description}</p>
             </div>
           ))}

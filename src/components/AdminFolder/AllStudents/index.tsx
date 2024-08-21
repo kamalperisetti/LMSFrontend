@@ -207,22 +207,22 @@ const AllStudents = () => {
           <table className="student-table">
             <thead>
               <tr>
-                <th>Student Name</th>
-                <th>Email</th>
-                <th>Phone Number</th>
-                <th>Details</th>
-                <th>Remove Student</th>
+                <th className="table-title">Student Name</th>
+                <th className="table-title">Email</th>
+                <th className="table-title">Phone Number</th>
+                <th className="table-title">Details</th>
+                <th className="table-title">Remove Student</th>
               </tr>
             </thead>
             <tbody>
               {students.map((each: StudentType) => (
                 <tr key={each.studentId}>
-                  <td>
+                  <td className="table-body">
                     {each.firstName} {each.lastName}
                   </td>
-                  <td>{each.email}</td>
-                  <td>{each.phoneNumber}</td>
-                  <td>
+                  <td className="table-body">{each.email}</td>
+                  <td className="table-body">{each.phoneNumber}</td>
+                  <td className="table-body">
                     <button
                       className="button"
                       onClick={() =>
@@ -232,7 +232,7 @@ const AllStudents = () => {
                       View Details
                     </button>
                   </td>
-                  <td>
+                  <td className="table-body">
                     <button
                       className="delete-icon"
                       onClick={() => removeStudent(each)}

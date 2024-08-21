@@ -53,7 +53,7 @@ const Admin = () => {
         <Sidebar />
       </div>
 
-      <div className="content-container">
+      <div className="content-container-main">
         {loading ? (
           <Loader />
         ) : (
@@ -77,7 +77,7 @@ const Admin = () => {
                       alt={each.courseName}
                     />
                   )}
-                  <p>{each.courseName}</p>
+                  <p className="course-title">{each.courseName}</p>
                 </div>
                 <div>
                   <p

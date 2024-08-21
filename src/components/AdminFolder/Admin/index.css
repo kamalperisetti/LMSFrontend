@@ -14,6 +14,14 @@
   border: solid 1px;
   border-radius: 5px;
 }
+@media (max-width: 768px) {
+  .individual-course-container {
+    padding: 1px;
+    margin: 1px;
+    width: 100px;
+    height: 93px;
+  }
+}
 .individual-course-container:hover {
   cursor: pointer;
 }
@@ -22,12 +30,38 @@
   width: 300px;
   border-radius: 5px;
 }
-/* .side-bar-container {
-  width: 20%;
-  position: fixed;
-} */
+
+@media (max-width: 768px) {
+  .course-image {
+    height: 70px;
+    width: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .course-title {
+    font-size: 7px;
+    margin-top: 0px;
+  }
+}
+.content-container-main {
+  margin-top: 10%;
+  width: 74%;
+  margin-left: 17%;
+}
+@media (max-width: 768px) {
+  .content-container-main {
+    margin-top: 16%;
+    margin-left: 23%;
+  }
+}
 .enrolled {
   text-align: center;
+}
+@media (max-width: 768px) {
+  .enrolled {
+    font-size: 6px;
+  }
 }
 .enrolled:hover {
   color: blue;

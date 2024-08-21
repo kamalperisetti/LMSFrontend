@@ -6,11 +6,59 @@
   margin-left: 20%;
   margin-top: 80px;
 }
+@media (max-width: 768px) {
+  .single-student-details-container {
+    margin-left: 30%;
+  }
+}
 .student-image {
   width: 250px;
   height: 250px;
   border-radius: 50%;
 }
+@media (max-width: 768px) {
+  .student-image {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .student-title-and-all {
+    font-size: 7px;
+  }
+}
+@media (max-width: 768px) {
+  .admin-student-details-heading {
+    font-size: 8px;
+  }
+}
+@media (max-width: 768px) {
+  .admin-student-course-name {
+    font-size: 6px;
+  }
+}
+@media (max-width: 768px) {
+  .admin-student-total-content {
+    font-size: 6px;
+  }
+}
+
 .student-profile-details {
   text-align: center;
+}
+.for-mobile-chart-container {
+  display: none;
+}
+.chart-container {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .for-mobile-chart-container {
+    display: block;
+  }
+  .chart-container {
+    display: none;
+  }
 }

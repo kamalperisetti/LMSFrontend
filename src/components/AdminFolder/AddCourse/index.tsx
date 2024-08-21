@@ -115,15 +115,7 @@ const AddCourse = () => {
         <Sidebar />
       </div>
       <div className="add-course-container">
-        <h1
-          style={{
-            fontSize: "4rem",
-            transition: "color 0.3s",
-            marginTop: "0px",
-          }}
-        >
-          Add A New Course
-        </h1>
+        <h1 className="add-course-heading">Add A New Course</h1>
         {loading ? (
           <div>
             <Loader />
@@ -131,7 +123,9 @@ const AddCourse = () => {
         ) : (
           <div>
             <div>
-              <label style={{ fontWeight: "bold" }}>Course Name</label>
+              <label className="add-course-name" style={{ fontWeight: "bold" }}>
+                Course Name
+              </label>
               <br />
               <textarea
                 required
@@ -154,21 +148,33 @@ const AddCourse = () => {
             </div>
             {meterial && (
               <div>
-                <label style={{ fontWeight: "bold" }}>Sub Title</label>
+                <label
+                  className="add-course-subtitle"
+                  style={{ fontWeight: "bold" }}
+                >
+                  Sub Title
+                </label>
                 <br />
                 <textarea
                   onChange={(e) => {
                     setTittle(e.target.value);
                   }}
                   value={title}
+                  className="course-title-input"
                   required
                   rows={10}
                   cols={80}
                 ></textarea>
                 <br />
-                <label style={{ fontWeight: "bold" }}>Description</label>
+                <label
+                  className="add-course-subtitle"
+                  style={{ fontWeight: "bold" }}
+                >
+                  Description
+                </label>
                 <br />
                 <textarea
+                  className="course-title-input"
                   onChange={(e) => {
                     setDescription(e.target.value);
                   }}

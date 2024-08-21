@@ -5,14 +5,39 @@
 .description {
   font-size: 18px;
 }
+@media (max-width: 768px) {
+  .description {
+    font-size: 8px;
+    margin-left: 14px;
+  }
+}
 
-/* .side-bar-container {
-  width: 20%;
-  position: sticky;
-} */
+@media (max-width: 768px) {
+  .course-details-side-conatainer {
+    padding: 2px;
+  }
+}
 
 .content-container {
   width: 80%;
-  margin-top: 80px;
+  margin-top: 10%;
   margin-left: 20%;
+}
+@media (max-width: 768px) {
+  .content-container {
+    margin-top: 10%;
+    margin-left: 29%;
+  }
+}
+
+@media (max-width: 768px) {
+  .course-details-side-heading {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .course-details-heading {
+    font-size: 10px;
+  }
 }
