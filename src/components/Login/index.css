@@ -150,3 +150,14 @@
 button:hover {
   border-color: #2ccc1d;
 }
+
+.login-heading {
+  color: darkblue;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .login-heading {
+    font-size: 11px;
+  }
+}

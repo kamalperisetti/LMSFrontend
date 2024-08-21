@@ -58,6 +58,7 @@
 }
 .register-heading {
   color: darkorchid;
+  text-align: center;
 }
 @media (max-width: 768px) {
   .register-heading {
